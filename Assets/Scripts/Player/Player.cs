@@ -72,7 +72,8 @@ public class Player : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-            float hInput = Input.GetAxis("Horizontal");
+        
+        float hInput = Input.GetAxis("Horizontal");
 
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
 
@@ -82,10 +83,28 @@ public class Player : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpForce);
             }
 
+            if (Input.GetButtonDown("Fire1") && hInput != 0)
+        {
+            anim.SetTrigger("Fire");
+        }
+
+        AnimatorClipInfo[]curPlayingClip = anim.GetCurrentAnimatorClipInfo(0);
+
+        if (curPlayingClip[0].clip.name != "Fire")
+        {
             Vector2 moveDir = new Vector2(hInput * speed, rb.velocity.y);
             rb.velocity = moveDir;
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
 
         anim.SetFloat("xVel", Mathf.Abs(hInput));
         anim.SetBool("isGrounded", isGrounded);
+
+         if (hInput > 0 && sr.flipX || hInput < 0 && !sr.flipX)
+        sr.flipX = !sr.flipX;
+
         }
 }
