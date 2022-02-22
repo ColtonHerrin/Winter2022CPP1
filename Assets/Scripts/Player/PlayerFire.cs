@@ -45,7 +45,7 @@ public class PlayerFire : MonoBehaviour
         if (sr.flipX)
         {
             Projectile temp = Instantiate(projectilePrefab, spawnPointLeft.position, spawnPointLeft.rotation);
-            temp.speed = projectileSpeed;
+            temp.speed = -projectileSpeed;
         }
         else
         {

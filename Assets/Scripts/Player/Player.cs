@@ -12,6 +12,35 @@ public class Player : MonoBehaviour
     SpriteRenderer sr;
     Animator anim;
 
+    int _score = 0;
+    int _lives = 1;
+    public int maxLives = 3;
+
+    public int score
+    {
+        get { return _score; }
+        set
+        {
+            _score = value;
+        }
+    }
+
+    public int lives
+    {
+        get { return _lives; }
+        set
+        {
+            _lives = value;
+            if (_lives > maxLives)
+                _lives = maxLives;
+
+            //if (_lives < 0)
+            //gameover stuff here
+
+            Debug.Log("Lives Set To: " + lives.ToString());
+        }
+    }
+
     [SerializeField]
     float speed;
 
@@ -26,6 +55,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     Transform groundCheck;
+
+    bool coroutineRunning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -69,26 +100,26 @@ public class Player : MonoBehaviour
         }
     }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
+    // Update is called once per frame
+    void Update()
+    {
+
         float hInput = Input.GetAxis("Horizontal");
 
-            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
 
-            if (isGrounded && Input.GetButtonDown("Jump"))
-            {
-                rb.velocity = Vector2.zero;
-                rb.AddForce(Vector2.up * jumpForce);
-            }
+        if (isGrounded && Input.GetButtonDown("Jump"))
+        {
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * jumpForce);
+        }
 
-            if (Input.GetButtonDown("Fire1") && hInput != 0)
+        if (Input.GetButtonDown("Fire1") && hInput != 0)
         {
             anim.SetTrigger("Fire");
         }
 
-        AnimatorClipInfo[]curPlayingClip = anim.GetCurrentAnimatorClipInfo(0);
+        AnimatorClipInfo[] curPlayingClip = anim.GetCurrentAnimatorClipInfo(0);
 
         if (curPlayingClip[0].clip.name != "Fire")
         {
@@ -103,8 +134,31 @@ public class Player : MonoBehaviour
         anim.SetFloat("xVel", Mathf.Abs(hInput));
         anim.SetBool("isGrounded", isGrounded);
 
-         if (hInput > 0 && sr.flipX || hInput < 0 && !sr.flipX)
-        sr.flipX = !sr.flipX;
+        if (hInput > 0 && sr.flipX || hInput < 0 && !sr.flipX)
+            sr.flipX = !sr.flipX;
 
+    }
+
+    public void StartJumpForceChange()
+    {
+        if (!coroutineRunning)
+            StartCoroutine("JumpForceChange");
+        else
+        {
+            StopCoroutine("JumpForceChange");
+            jumpForce /= 2;
+            StartCoroutine("JumpForceChange");
         }
+    }
+
+    IEnumerator JumpForceChange()
+    {
+        coroutineRunning = true;
+        jumpForce *= 2;
+
+        yield return new WaitForSeconds(5.0f);
+
+        jumpForce /= 2;
+        coroutineRunning = false;
+    }
 }
