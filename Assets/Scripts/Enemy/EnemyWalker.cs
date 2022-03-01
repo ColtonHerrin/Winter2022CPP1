@@ -1,0 +1,51 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody2D))]
+public class EnemyWalker : Enemy
+{
+    Rigidbody2D rb;
+    [SerializedField] float speed;
+
+    // Start is called before the first frame update
+    public override void Start()
+    {
+        base.Start();
+        //do my specific setup here
+        rb = GetComponent<Rigidbody2D>();
+
+        if (speed <= 0)
+            speed = 5.0f;
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        base.TakeDamage(damage);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!anim.GetBool("Death") & !anim.GetBool("Squish"))
+        {
+            
+        }
+        if(sr.flipX)
+        {
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Barrier")
+        {
+            sr.flipX = !sr.flipX;
+        }
+    }
+}

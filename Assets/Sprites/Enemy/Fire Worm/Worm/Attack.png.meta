@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: abd4608a35a8d9142bbece28f4116798
+guid: b4bd708a62d7af94785502012b1b5820
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4697018519287012541
-    second: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_0
+      213: -7008412969330441016
+    second: Attack_0
   - first:
-      213: -8436797112547055070
-    second: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_1
+      213: -7763475090823894447
+    second: Attack_1
   - first:
-      213: -8747222282412573928
-    second: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_2
+      213: 302641331129538988
+    second: Attack_2
   - first:
-      213: -8579494670702129063
-    second: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_3
+      213: -6329420634031446844
+    second: Attack_3
   - first:
-      213: -3505579613923930018
-    second: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_4
+      213: -910092549403018386
+    second: Attack_4
   - first:
-      213: 7810072019493677105
-    second: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_5
+      213: 221524225039350300
+    second: Attack_5
   - first:
-      213: 6659234775998032871
-    second: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_6
-  - first:
-      213: -967454592765562046
-    second: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_7
+      213: 1290532464073988732
+    second: Attack_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,139 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_0
+      name: Attack_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 327
-        width: 31
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3436776ea86d0deb0800000000000000
-      internalID: -4697018519287012541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_1
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 328
-        width: 30
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22a6798e9b97aea80800000000000000
-      internalID: -8436797112547055070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_2
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 327
-        width: 22
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 2, z: 1, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81bba6dcdaf9b9680800000000000000
-      internalID: -8747222282412573928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_3
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 327
-        width: 24
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 2, z: 1, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95051789d038fe880800000000000000
-      internalID: -8579494670702129063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_4
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 327
-        width: 33
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e50963c1aeda95fc0800000000000000
-      internalID: -3505579613923930018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_5
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 173
-        width: 28
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13863284f13f26c60800000000000000
-      internalID: 7810072019493677105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_6
-      rect:
-        serializedVersion: 2
-        x: 442
-        y: 441
-        width: 11
-        height: 19
+        x: 817
+        y: 30
+        width: 68
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7eb6a432fba5a6c50800000000000000
-      internalID: 6659234775998032871
+      spriteID: 8c481db598d1dbe90800000000000000
+      internalID: -7008412969330441016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Cut Man Mega Man X-Style_7
+      name: Attack_1
       rect:
         serializedVersion: 2
-        x: 380
-        y: 435
-        width: 45
-        height: 25
+        x: 913
+        y: 32
+        width: 73
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +147,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24373e57c29e292f0800000000000000
-      internalID: -967454592765562046
+      spriteID: 15a29dc9988924490800000000000000
+      internalID: -7763475090823894447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_2
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 32
+        width: 85
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9d35cefa2333400800000000000000
+      internalID: 302641331129538988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_3
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 30
+        width: 81
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c42782d7716928a0800000000000000
+      internalID: -6329420634031446844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_4
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 32
+        width: 75
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b7a10f5a3be53f0800000000000000
+      internalID: -910092549403018386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_5
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 31
+        width: 86
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a3d96eb13031300800000000000000
+      internalID: 221524225039350300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_6
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 33
+        width: 76
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a5d344074e8e110800000000000000
+      internalID: 1290532464073988732
       vertices: []
       indices: 
       edges: []

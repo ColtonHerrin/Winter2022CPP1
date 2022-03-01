@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 036b53e44a7c3924d8ef9bf3df63b4fb
+guid: 3852235741b76c24a87f67f9c6864229
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3739250827264171929
-    second: Custom Edited - Mega Man Customs - Snake Man Mega Man 7-Style_0
+      213: 3225832317793331946
+    second: slime-Sheet_0
   - first:
-      213: 8118876050411548782
-    second: Custom Edited - Mega Man Customs - Snake Man Mega Man 7-Style_1
+      213: 5952692474738800764
+    second: slime-Sheet_1
+  - first:
+      213: 4909821198284645373
+    second: slime-Sheet_2
+  - first:
+      213: 4179155057698957012
+    second: slime-Sheet_3
+  - first:
+      213: -8154299252778131244
+    second: slime-Sheet_4
+  - first:
+      213: 1734891440256307957
+    second: slime-Sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,43 +109,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Snake Man Mega Man 7-Style_0
+      name: slime-Sheet_0
       rect:
         serializedVersion: 2
-        x: 181
-        y: 81
-        width: 57
-        height: 47
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        x: 65
+        y: 51
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99f9a25e0dc74e330800000000000000
-      internalID: 3739250827264171929
+      spriteID: aeaeb0fd66574cc20800000000000000
+      internalID: 3225832317793331946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custom Edited - Mega Man Customs - Snake Man Mega Man 7-Style_1
+      name: slime-Sheet_1
       rect:
         serializedVersion: 2
-        x: 240
-        y: 81
-        width: 54
-        height: 49
+        x: 98
+        y: 51
+        width: 28
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 5, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e60f43090ca0ca070800000000000000
-      internalID: 8118876050411548782
+      spriteID: c7872fd54463c9250800000000000000
+      internalID: 5952692474738800764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 51
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df36072dd50332440800000000000000
+      internalID: 4909821198284645373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 51
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d66c6302675ff930800000000000000
+      internalID: 4179155057698957012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 51
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d02ded680c16de80800000000000000
+      internalID: -8154299252778131244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 51
+        width: 27
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2d754b292931810800000000000000
+      internalID: 1734891440256307957
       vertices: []
       indices: 
       edges: []
