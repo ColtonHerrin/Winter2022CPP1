@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Level
   - Barrier
+  - PlayerProjectile
   layers:
   - Default
   - TransparentFX

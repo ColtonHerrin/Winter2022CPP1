@@ -22,6 +22,8 @@ public class EnemyWalker : Enemy
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
+
+        Debug.Log("Enemy Walker took " + damage + "damage");
     }
 
     // Update is called once per frame
@@ -47,5 +49,19 @@ public class EnemyWalker : Enemy
         {
             sr.flipX = !sr.flipX;
         }
+    }
+
+     public void IsSquished()
+    {
+        anim.SetBool("Squish", true);
+        rb.velocity = Vector2.zero;
+        Destroy(transform.parent.gameObject, 1f);
+    }
+    public override void Death()
+    {
+        base.Death();
+        anim.SetBool("Death", true);
+        rb.velocity = Vector2.zero;
+        Destroy(transform.parent.gameObject, 1f);
     }
 }

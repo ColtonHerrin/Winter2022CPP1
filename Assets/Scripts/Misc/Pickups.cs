@@ -21,7 +21,7 @@ public class Pickups : MonoBehaviour
         if (curCollectible == CollectibleType.LIFE)
         {
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            rb.velocity = new Vector2(1, rb.velocity.y);
+            rb.velocity = new Vector2(-3, rb.velocity.y);
         }
     }
 
@@ -35,20 +35,21 @@ public class Pickups : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            Player curPlayerScript = collision.gameObject.GetComponent<Player>();
-
-            switch (curCollectible)
+                 switch (curCollectible)
                 {
                     case CollectibleType.POWERUP:
-
-                    curPlayerScript.score += ScoreValue;
+                    collision.gameObject.GetComponent<Player>().StartJumpForceChange();
+                    //curPlayerScript.score += ScoreValue;
+                    GameManager.instance.score += ScoreValue;
                         break;
                     case CollectibleType.LIFE:
-                    curPlayerScript.lives++;
-                        curPlayerScript.score += ScoreValue;
+                    //curPlayerScript.lives++;
+                    //curPlayerScript.score += ScoreValue;
+                    GameManager.instance.lives++;
                         break;
                     case CollectibleType.SCORE:
-                    curPlayerScript.score += ScoreValue;
+                    //curPlayerScript.score += ScoreValue;
+                    GameManager.instance.score += ScoreValue;
                         break;
                 }
             Destroy(gameObject);

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7455556879543794242}
   - component: {fileID: 6760796636978279034}
   m_Layer: 0
-  m_Name: Mega Man Bullet
-  m_TagString: Untagged
+  m_Name: PlayerProjectile
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,3 +136,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   lifetime: 0
+  damageValue: 0

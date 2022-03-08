@@ -12,34 +12,6 @@ public class Player : MonoBehaviour
     SpriteRenderer sr;
     Animator anim;
 
-    int _score = 0;
-    int _lives = 1;
-    public int maxLives = 3;
-
-    public int score
-    {
-        get { return _score; }
-        set
-        {
-            _score = value;
-        }
-    }
-
-    public int lives
-    {
-        get { return _lives; }
-        set
-        {
-            _lives = value;
-            if (_lives > maxLives)
-                _lives = maxLives;
-
-            //if (_lives < 0)
-            //gameover stuff here
-
-            Debug.Log("Lives Set To: " + lives.ToString());
-        }
-    }
 
     [SerializeField]
     float speed;
@@ -103,7 +75,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        AnimatorClipInfo[] curPlayingClip = anim.GetCurrentAnimatorClipInfo(0);
         float hInput = Input.GetAxis("Horizontal");
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
@@ -119,7 +91,6 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Fire");
         }
 
-        AnimatorClipInfo[] curPlayingClip = anim.GetCurrentAnimatorClipInfo(0);
 
         if (curPlayingClip[0].clip.name != "Fire")
         {
@@ -160,5 +131,17 @@ public class Player : MonoBehaviour
 
         jumpForce /= 2;
         coroutineRunning = false;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Squish")
+        {
+            col.gameObject.GetComponentInParent<EnemyWalker>().IsSquished();
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * jumpForce);
+            Destroy(col.gameObject);
+        }
     }
 }
