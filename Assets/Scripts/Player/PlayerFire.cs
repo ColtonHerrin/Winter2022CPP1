@@ -35,7 +35,7 @@ public class PlayerFire : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             anim.SetTrigger("Fire");
-            FireProjectile();
+            
         }
     }
 
