@@ -2,6 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+
+[RequireComponent(typeof(AudioSource))]
 
 public class Pickups : MonoBehaviour
 {
@@ -14,10 +17,16 @@ public class Pickups : MonoBehaviour
     }
 
     [SerializedField] CollectibleType curCollectible;
+    [SerializedField] AudioClip pickupSound;
+    AudioSource myAudioSource;
     public int ScoreValue;
+
+    public AudioMixerGroup soundFXGroup;
     // Start is called before the first frame update
     private void Start()
     {
+        if (!myAudioSource)
+            myAudioSource = GetComponent<AudioSource>();
         if (curCollectible == CollectibleType.LIFE)
         {
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -35,23 +44,27 @@ public class Pickups : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-                 switch (curCollectible)
-                {
-                    case CollectibleType.POWERUP:
+            PlayerSounds ps = collision.gameObject.GetComponent<PlayerSounds>();
+            ps.Play(pickupSound, soundFXGroup);
+
+            switch (curCollectible)
+            {
+                case CollectibleType.POWERUP:
                     collision.gameObject.GetComponent<Player>().StartJumpForceChange();
                     //curPlayerScript.score += ScoreValue;
                     GameManager.instance.score += ScoreValue;
-                        break;
-                    case CollectibleType.LIFE:
+                    break;
+                case CollectibleType.LIFE:
                     //curPlayerScript.lives++;
                     //curPlayerScript.score += ScoreValue;
                     GameManager.instance.lives++;
-                        break;
-                    case CollectibleType.SCORE:
+                    break;
+                case CollectibleType.SCORE:
                     //curPlayerScript.score += ScoreValue;
                     GameManager.instance.score += ScoreValue;
-                        break;
-                }
+                    break;
+            }
+
             Destroy(gameObject);
         }
     }

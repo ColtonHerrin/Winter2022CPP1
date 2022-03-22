@@ -102,11 +102,11 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("MainMenu");
         }
         {
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
+        //#if UNITY_EDITOR
+        //    UnityEditor.EditorApplication.isPlaying = false;
+        //#else
+        //    Application.Quit();
+        //#endif
         }
     }
 
